@@ -8,7 +8,7 @@ import numpy
 
 # triangle hash (efficient mesh intersection)
 triangle_hash_module = Extension(
-    'libmesh/triangle_hash',
+    'libmesh.triangle_hash',
     sources=[
         'libmesh/triangle_hash.pyx'
     ],
