@@ -68,7 +68,7 @@ class MeshIntersector:
         contains1 = (np.mod(nintersect0, 2) == 1)
         contains2 = (np.mod(nintersect1, 2) == 1)
         if (contains1 != contains2).any():
-            print('Warning: contains1 != contains2 for some points.')
+            raise RuntimeError('contains1 != contains2 for some points')
         contains[mask] = (contains1 & contains2)
         return contains
 
